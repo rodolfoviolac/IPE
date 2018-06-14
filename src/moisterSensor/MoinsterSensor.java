@@ -12,7 +12,7 @@ public class MoinsterSensor implements MoisterSensor {
     SetHandler handler = new SetHandler();
     private double moisterValue;
 
-    public MoinsterSensor(){
+    private MoinsterSensor(){
         getCurrentValue();
     }
 
