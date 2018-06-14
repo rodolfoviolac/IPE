@@ -1,4 +1,4 @@
-package moisterSensor.ui;
+package sensors.moisterSensor.ui;
 
 public class MoisterSensorController {
 }

@@ -1,18 +1,18 @@
-package moisterSensor;
+package sensors.moisterSensor;
 
-import moisterSensor.handler.RequestHandler;
-import moisterSensor.handler.SetHandler;
+import sensors.moisterSensor.handler.RequestHandler;
+import sensors.moisterSensor.handler.ValuesHandler;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Scope(value = "singleton")
 @Component
-public class MoinsterSensor implements MoisterSensor {
+public class MoisterSensor implements MoisterSensorInterface {
     RequestHandler request = new RequestHandler();
-    SetHandler handler = new SetHandler();
+    ValuesHandler handler = new ValuesHandler();
     private double moisterValue;
 
-    private MoinsterSensor(){
+    private MoisterSensor(){
         getCurrentValue();
     }
 

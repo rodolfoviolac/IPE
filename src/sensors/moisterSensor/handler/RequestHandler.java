@@ -1,4 +1,4 @@
-package moisterSensor.handler;
+package sensors.moisterSensor.handler;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import java.util.Date;
@@ -10,10 +10,10 @@ public class RequestHandler {
 
     private double moisterValue;
     private Date lastRead;
-    private HttpRequest request;
+    private PerfomRequest request;
 
     public RequestHandler() {
-        this.request = new HttpRequest();
+        this.request = new PerfomRequest();
         updateMoister();
     }
 

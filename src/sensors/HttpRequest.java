@@ -1,4 +1,4 @@
-package moisterSensor.handler;
+package sensors;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -8,8 +8,8 @@ import java.net.URL;
 
 public class HttpRequest {
     public HttpRequest() {}
-    public double getSoilMoisture() {
-        double soilMoisture = 0;
+    public JSONObject requestSensors() {
+        JSONObject sensorResponse = new JSONObject();
         try {
             String API_URL = "https://plantingdecision.herokuapp.com/sensors";
             URL url = new URL(API_URL);
@@ -19,13 +19,12 @@ public class HttpRequest {
             InputStream in = new BufferedInputStream(conn.getInputStream());
             String result = org.apache.commons.io.IOUtils.toString(in, "UTF-8");
             System.out.println(result);
-            JSONObject sensorResponse = new JSONObject(result);
-            soilMoisture = sensorResponse.getDouble("soilMoisture");
+            sensorResponse = new JSONObject(result);
             in.close();
             conn.disconnect();
         } catch (Exception e) {
             System.out.println(e);
         }
-        return soilMoisture;
+        return sensorResponse;
     }
 }

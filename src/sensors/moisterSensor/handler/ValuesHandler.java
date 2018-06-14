@@ -1,6 +1,6 @@
-package moisterSensor.handler;
+package sensors.moisterSensor.handler;
 
-public class SetHandler {
+public class ValuesHandler {
     public boolean moisterSetHandler(double newValue){
         boolean shouldReturn = false;
         if (newValue >= 0 && newValue <= 100) shouldReturn = true;
