@@ -10,4 +10,10 @@
     </bean>
     <bean id="humiditySensor" name="HumiditySensor" class="sensors.humiditySensor.HumiditySensor" scope="singleton">
     </bean>
+    <bean id="luminositySensor" name="LuminositySensor" class="sensors.luminositySensor.LuminositySensor" scope="singleton">
+    </bean>
+    <bean id="pluviometricSensor" name="PluviometricSensor" class="sensors.pluviometricSensor.PluviometricSensor" scope="singleton">
+    </bean>
+    <bean id="weatherSensor" name="WeatherSensor" class="sensors.weatherSensor.WeatherSensor" scope="singleton">
+    </bean>
 </beans>

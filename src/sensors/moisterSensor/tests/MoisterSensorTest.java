@@ -3,7 +3,7 @@ import sensors.moisterSensor.handler.ValuesHandler;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SensorValuesTest {
+public class MoisterSensorTest {
 
     @Test
     void newSensorValue() {

@@ -5,7 +5,7 @@ import sensors.humiditySensor.handler.ValuesHandler;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SensorValuesTest {
+public class HumiditySensorTest {
 
     @Test
     void newSensorValue() {

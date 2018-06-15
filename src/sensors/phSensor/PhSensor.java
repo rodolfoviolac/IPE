@@ -1,8 +1,12 @@
 package sensors.phSensor;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 import sensors.phSensor.handler.RequestHandler;
 import sensors.phSensor.handler.ValuesHandler;
 
+@Scope(value = "singleton")
+@Component
 public class PhSensor {
     RequestHandler request = new RequestHandler();
     ValuesHandler handler = new ValuesHandler();

@@ -6,7 +6,7 @@ import sensors.temperatureSensor.handler.ValuesHandler;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SensorValuesTest {
+public class TemperatureSensorTest {
 
     @Test
     void newSensorValue() {
