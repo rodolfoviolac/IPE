@@ -8,4 +8,6 @@
     </bean>
     <bean id="phSensor" name="PhSensor" class="sensors.phSensor.PhSensor" scope="singleton">
     </bean>
+    <bean id="humiditySensor" name="HumiditySensor" class="sensors.humiditySensor.HumiditySensor" scope="singleton">
+    </bean>
 </beans>

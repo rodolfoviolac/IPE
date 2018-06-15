@@ -49,8 +49,6 @@ public class HttpRequest {
 
     private boolean isTimeExpired() {
         Date now = new Date();
-        System.out.println(lastRead);
-        System.out.println(now);
         return ((now.getTime() - lastRead.getTime()) > TTL);
     }
 }
