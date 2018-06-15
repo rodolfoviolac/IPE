@@ -40,7 +40,7 @@ public class LoginController{
     }
     private void initializerListeners(){
 
-       // confirmButton.addActionListener(this.tryLogin());
+       // confirmButton.addActionListener(new confirmButtonListener());
 
     }
 
@@ -50,5 +50,15 @@ public class LoginController{
 
     private void tryLogin(){
         System.out.println("Rodolfo caritutu");
+    }
+
+
+    private class confirmButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+
+        }
     }
 }
