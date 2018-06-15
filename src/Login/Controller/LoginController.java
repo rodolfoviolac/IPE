@@ -31,6 +31,12 @@ public class LoginController{
     }
 
 
+    public void showLoginWindow(){
+
+        loginFrame.setVisible(true);
+    }
+
+
     private void initComponents(){
 
         this.loginTextField = loginFrame.getLoginTextField();
@@ -40,7 +46,7 @@ public class LoginController{
     }
     private void initializerListeners(){
 
-       // confirmButton.addActionListener(new confirmButtonListener());
+        confirmButton.addActionListener(new confirmButtonListener());
 
     }
 
@@ -48,16 +54,12 @@ public class LoginController{
     private void setView(){
     }
 
-    private void tryLogin(){
-        System.out.println("Rodolfo caritutu");
-    }
-
 
     private class confirmButtonListener implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            System.out.print("Rodolfinhoooo");
 
         }
     }

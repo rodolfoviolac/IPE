@@ -1,3 +1,4 @@
+import Login.Controller.LoginController;
 import sensors.HttpRequest;
 import sensors.humiditySensor.HumiditySensor;
 import sensors.moisterSensor.MoisterSensor;
@@ -18,5 +19,9 @@ public class Main {
         System.out.println(temperature.getCurrentValue());
         System.out.println(humidity.getCurrentValue());
         System.out.println(ph.getCurrentValue());
+
+       LoginController login =  new LoginController();
+
+       login.showLoginWindow();
     }
 }
