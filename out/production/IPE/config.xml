@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="moinsterSensor" name="MoinsterSensor" class="sensors.moisterSensor.MoisterSensor" scope = "singleton">
+    <bean id="moinsterSensor" name="MoinsterSensor" class="sensors.moisterSensor.MoisterSensor" scope="singleton">
     </bean>
-    <bean id="temperatureSensor" name="TemperatureSensor" class="sensors.temperatureSensor.TemperatureSensor" scope = "singleton">
+    <bean id="temperatureSensor" name="TemperatureSensor" class="sensors.temperatureSensor.TemperatureSensor" scope="singleton">
+    </bean>
+    <bean id="phSensor" name="PhSensor" class="sensors.phSensor.PhSensor" scope="singleton">
     </bean>
 </beans>

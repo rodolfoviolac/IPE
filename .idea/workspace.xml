@@ -2,35 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d515105-e2a6-499b-ac38-122c95c1d2a0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sensors/HttpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensorInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/handler/PerformRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/handler/RequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/handler/ValuesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/tests/SensorValuesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/ui/TemperatureSensorForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/temperatureSensor/ui/TemperatureSensorForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/PhSensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/PhSensorInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/handler/PerformRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/handler/RequestHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/handler/ValuesHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/tests/SensorValuesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/ui/PhSensorForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensors/phSensor/ui/PhSensorForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IPE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IPE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IPE/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IPE/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IPE/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IPE/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IPE/moisterSensor/MoinsterSensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IPE/moisterSensor/MoisterSensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IPE/moisterSensor/handler/HttpRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IPE/moisterSensor/handler/RequestHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IPE/moisterSensor/handler/SetHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IPE/moisterSensor/tests/SensorValuesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IPE/moisterSensor/ui/MoisterSensorController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/MoinsterSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/MoisterSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/MoisterSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/MoisterSensorInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/handler/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/handler/PerfomRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/handler/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/handler/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/handler/SetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/handler/ValuesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/tests/SensorValuesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/tests/SensorValuesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/ui/MoisterSensorController.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/ui/MoisterSensorController.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/moisterSensor/ui/MoisterSensorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/ui/MoisterSensorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sensors/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sensors/moisterSensor/handler/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/moisterSensor/handler/RequestHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TemperatureSensor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensor.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,10 +41,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorValuesTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/tests/SensorValuesTest.java">
+      <file leaf-file-name="HttpRequest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sensors/HttpRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="255">
+              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhSensor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/PhSensor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
               <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -66,20 +74,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoisterSensor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sensors/moisterSensor/MoisterSensor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PerformRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/PerformRequest.java">
+        <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/handler/PerformRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
@@ -87,32 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sensors/HttpRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RequestHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/RequestHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/handler/RequestHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValuesHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/ValuesHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -168,15 +143,23 @@
         <option value="$PROJECT_DIR$/src/sensors/moisterSensor/MoinsterSensor.java" />
         <option value="$PROJECT_DIR$/src/sensors/moisterSensor/MoinsterSensorasd.java" />
         <option value="$PROJECT_DIR$/src/sensors/moisterSensor/MoisterSensor.java" />
-        <option value="$PROJECT_DIR$/src/sensors/temperatureSensor/handler/RequestHandler.java" />
         <option value="$PROJECT_DIR$/src/sensors/temperatureSensor/handler/PerformRequest.java" />
         <option value="$PROJECT_DIR$/src/sensors/temperatureSensor/handler/ValuesHandler.java" />
-        <option value="$PROJECT_DIR$/src/config.xml" />
         <option value="$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensorInterface.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/sensors/HttpRequest.java" />
         <option value="$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensor.java" />
         <option value="$PROJECT_DIR$/src/sensors/temperatureSensor/tests/SensorValuesTest.java" />
+        <option value="$PROJECT_DIR$/src/sensors/temperatureSensor/handler/RequestHandler.java" />
+        <option value="$PROJECT_DIR$/src/sensors/moisterSensor/handler/RequestHandler.java" />
+        <option value="$PROJECT_DIR$/src/sensors/phSensor/PhInterface.java" />
+        <option value="$PROJECT_DIR$/src/sensors/phSensor/PhSensorInterface.java" />
+        <option value="$PROJECT_DIR$/src/sensors/phSensor/handler/PerformRequest.java" />
+        <option value="$PROJECT_DIR$/src/sensors/phSensor/handler/ValuesHandler.java" />
+        <option value="$PROJECT_DIR$/src/sensors/phSensor/PhSensor.java" />
+        <option value="$PROJECT_DIR$/src/sensors/phSensor/tests/SensorValuesTest.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/sensors/phSensor/handler/RequestHandler.java" />
+        <option value="$PROJECT_DIR$/src/config.xml" />
+        <option value="$PROJECT_DIR$/src/sensors/HttpRequest.java" />
       </list>
     </option>
   </component>
@@ -219,36 +202,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sensors" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="moisterSensor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IPE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
-              <item name="moisterSensor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="moisterSensor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IPE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
-              <item name="moisterSensor" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="moisterSensor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IPE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
-              <item name="temperatureSensor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="moisterSensor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IPE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
-              <item name="temperatureSensor" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -265,16 +218,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/org.apache.commons.io.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sensors.phSensor.tests" />
       <recent name="sensors.temperatureSensor.tests" />
       <recent name="sensors.moisterSensor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\ufrgs\IPE\src\sensors\phSensor\handler" />
       <recent name="C:\Users\PC\Desktop\ufrgs\IPA" />
     </key>
   </component>
@@ -290,7 +245,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SensorValuesTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="IPE" />
@@ -298,6 +253,29 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SensorValuesTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IPE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sensors.phSensor.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="sensors.phSensor.tests" />
+      <option name="MAIN_CLASS_NAME" value="sensors.phSensor.tests.SensorValuesTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="SensorValuesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IPE" />
@@ -387,11 +365,13 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.SensorValuesTest.newSensorValue" />
       <item itemvalue="JUnit.SensorValuesTest" />
+      <item itemvalue="JUnit.SensorValuesTest (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SensorValuesTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SensorValuesTest (1)" />
+        <item itemvalue="JUnit.SensorValuesTest" />
         <item itemvalue="JUnit.SensorValuesTest.newSensorValue" />
       </list>
     </recent_temporary>
@@ -407,12 +387,29 @@
       <option name="presentableId" value="Default" />
       <updated>1529003145963</updated>
       <workItem from="1529003148583" duration="11179000" />
-      <workItem from="1529015374849" duration="4883000" />
+      <workItem from="1529015374849" duration="8655000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="SensorValuesTest - 2018.06.14 at 20h 51m 05s.xml">
+      <configuration name="SensorValuesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SensorValuesTest - 2018.06.14 at 20h 52m 29s.xml">
+      <configuration name="SensorValuesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SensorValuesTest - 2018.06.14 at 20h 55m 09s.xml">
+      <configuration name="SensorValuesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SensorValuesTest_(1) - 2018.06.14 at 21h 41m 09s.xml">
+      <configuration name="SensorValuesTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SensorValuesTest_(1) - 2018.06.14 at 21h 42m 49s.xml">
+      <configuration name="SensorValuesTest (1)" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16062000" />
+    <option name="totallyTimeSpent" value="19834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -428,8 +425,8 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33660132" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39215687" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -539,23 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/RequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/ValuesHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sensors/moisterSensor/MoisterSensorInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -563,55 +543,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/ui/TemperatureSensorForm.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensorInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/tests/SensorValuesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/PerformRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/moisterSensor/handler/PerfomRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/moisterSensor/handler/RequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -628,26 +566,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/ui/TemperatureSensorForm.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/ui/TemperatureSensorForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensor.java">
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/ValuesHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/RequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/tests/SensorValuesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/handler/PerformRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="238">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sensors">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sensors</OriginalElement>
+          <nodes>
+            <node x="0.0" y="148.0">sensors.HttpRequest</node>
+            <node x="0.0" y="0.0">sensors.temperatureSensor</node>
+            <node x="0.0" y="74.0">sensors.moisterSensor</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-420.5" y="50.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/ui/TemperatureSensorForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/moisterSensor/handler/PerfomRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" selection-start-line="11" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/temperatureSensor/TemperatureSensorInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/moisterSensor/handler/RequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/PhSensorInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/ui/PhSensorForm.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/ui/PhSensorForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/tests/SensorValuesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/handler/ValuesHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/PhSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/handler/PerformRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/phSensor/handler/RequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/HttpRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

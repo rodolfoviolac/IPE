@@ -1,23 +1,26 @@
-package sensors.moisterSensor.handler;
+package sensors.phSensor.handler;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
 @Scope(value = "singleton")
 @Component
 public class RequestHandler {
-    private static final long TTL = 3000; // 10s
-    private double moisterValue;
+    public static final long TTL = 10000; // 10s
+
+    private double phValue;
     private Date lastRead;
-    private PerfomRequest request;
+    public PerformRequest request;
 
     public RequestHandler() {
-        this.request = new PerfomRequest();
-        updateMoister();
+        this.request = new PerformRequest();
+        updatePh();
     }
 
-    private void updateMoister() {
-        this.moisterValue = request.getSoilMoisture();
+    private void updatePh() {
+        this.phValue = request.getPh();
         this.lastRead = new Date();
     }
 
@@ -28,8 +31,8 @@ public class RequestHandler {
 
     public double getCurrentValue() {
         if (isTimeExpired()) {
-            updateMoister();
+            updatePh();
         }
-        return moisterValue;
+        return phValue;
     }
 }

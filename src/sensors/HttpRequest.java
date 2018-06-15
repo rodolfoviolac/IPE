@@ -1,15 +1,34 @@
 package sensors;
 import org.json.JSONObject;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Date;
 
+@Scope(value = "singleton")
+@Component
 public class HttpRequest {
-    public HttpRequest() {}
+    public static final long TTL = 30000; // 30s
+    private Date lastRead;
+    JSONObject sensorResponse;
+
+    public HttpRequest() {
+        performRequest();
+    }
+
+
     public JSONObject requestSensors() {
-        JSONObject sensorResponse = new JSONObject();
+        if (isTimeExpired()) {
+           performRequest();
+        }
+        return sensorResponse;
+    }
+
+    private void performRequest(){
         try {
             String API_URL = "https://plantingdecision.herokuapp.com/sensors";
             URL url = new URL(API_URL);
@@ -22,9 +41,16 @@ public class HttpRequest {
             sensorResponse = new JSONObject(result);
             in.close();
             conn.disconnect();
+            this.lastRead = new Date();
         } catch (Exception e) {
             System.out.println(e);
         }
-        return sensorResponse;
+    }
+
+    private boolean isTimeExpired() {
+        Date now = new Date();
+        System.out.println(lastRead);
+        System.out.println(now);
+        return ((now.getTime() - lastRead.getTime()) > TTL);
     }
 }
