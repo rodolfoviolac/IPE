@@ -13,4 +13,21 @@ public class Plot {
     private Ground ground;
     private Cover cover;
 
+
+
+    public void irrigate(){
+
+
+    }
+
+    public void cover(){
+
+
+    }
+
+    public void prepareGround(){
+
+
+    }
+
 }
