@@ -2,6 +2,6 @@ package sensors.temperatureSensor;
 
 public interface TemperatureSensorInterface {
     double getCurrentValue();
-    double getMoisterValue();
+    double getTemperatureValue();
     void setTemperatureValue(double newValue);
 }

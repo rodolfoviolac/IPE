@@ -33,21 +33,16 @@ public class LoginController{
 
 
     private void initComponents(){
-
         this.loginTextField = loginFrame.getLoginTextField();
         this.passwordTextField = loginFrame.getPasswordTextField();
         this.confirmButton = loginFrame.getConfirmButton();
-
     }
     private void initializerListeners(){
-
         confirmButton.addActionListener(new confirmButtonListener());
-
     }
 
 
     private class confirmButtonListener implements ActionListener{
-
         @Override
         public void actionPerformed(ActionEvent e) {
 

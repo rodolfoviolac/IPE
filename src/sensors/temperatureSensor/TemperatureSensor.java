@@ -22,7 +22,7 @@ public class TemperatureSensor implements TemperatureSensorInterface {
         return temperatureValue;
     }
 
-    public double getMoisterValue() {
+    public double getTemperatureValue() {
         return temperatureValue;
     }
 
