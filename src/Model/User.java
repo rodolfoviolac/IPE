@@ -1,4 +1,4 @@
-package Login.Model;
+package Model;
 
 public class User {
 

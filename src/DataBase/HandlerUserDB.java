@@ -1,18 +1,18 @@
-package Login.Model;
-import java.util.HashMap;
+package DataBase;
+import Model.User;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
 import java.util.Map;
 
-public class Handler {
+public class HandlerUserDB {
 
-    private Map<String,User> userDic;
+    private Map<String, User> userDic;
 
-    private Handler handler_user;
+    private HandlerUserDB handler_UserDB_user;
 
 
-    public Handler(){
+    public HandlerUserDB(){
 
         downLoadUsersFromSource();
 

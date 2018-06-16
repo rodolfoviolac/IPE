@@ -1,16 +1,12 @@
 package Login.Controller;
 
-import Login.Model.Handler;
-import Login.Model.User;
+import DataBase.HandlerUserDB;
+import Model.User;
 import Login.View.LoginFrame;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-
-import javax.swing.*;
 
 public class LoginController{
 
@@ -19,20 +15,16 @@ public class LoginController{
     private JButton confirmButton;
     private JTextField loginTextField;
     private JPasswordField passwordTextField;
-    private Handler user_handler;
+    private HandlerUserDB user_handler;
 
 
     public LoginController() {
-        this.user_handler = new Handler();
+        this.user_handler = new HandlerUserDB();
         loginFrame = new LoginFrame();
 
         this.initComponents();
         this.initializerListeners();
-
-        this.setView();
-
     }
-
 
     public void showLoginWindow(){
 
@@ -54,10 +46,6 @@ public class LoginController{
     }
 
 
-    private void setView(){
-    }
-
-
     private class confirmButtonListener implements ActionListener{
 
         @Override
@@ -75,7 +63,6 @@ public class LoginController{
             }
 
             else{
-
 
             }
 
