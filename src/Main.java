@@ -20,16 +20,6 @@ public class Main {
         LuminositySensor luminosity = (LuminositySensor) context.getBean("LuminositySensor");
         PluviometricSensor pluviometric = (PluviometricSensor) context.getBean("PluviometricSensor");
         WeatherSensor weather = (WeatherSensor) context.getBean("WeatherSensor");
-        System.out.println(moister.getCurrentValue());
-        System.out.println(temperature.getCurrentValue());
-        System.out.println(humidity.getCurrentValue());
-        System.out.println(ph.getCurrentValue());
-        System.out.println(luminosity.getCurrentValue());
-        System.out.println(pluviometric.getCurrentValue());
-        System.out.println(weather.getWeatherCurrentValue());
-        System.out.println(weather.getWeatherId());
-        System.out.println(weather.getForecastCurrentValue());
-        System.out.println(weather.getForecastId());
 
        LoginController login =  new LoginController();
 

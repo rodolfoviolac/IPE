@@ -7,7 +7,7 @@ import sensors.phSensor.handler.ValuesHandler;
 
 @Scope(value = "singleton")
 @Component
-public class PhSensor {
+public class PhSensor implements PhSensorInterface {
     RequestHandler request = new RequestHandler();
     ValuesHandler handler = new ValuesHandler();
     private double temperatureValue;

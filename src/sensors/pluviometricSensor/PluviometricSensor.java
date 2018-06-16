@@ -7,7 +7,7 @@ import sensors.pluviometricSensor.handler.ValuesHandler;
 
 @Scope(value = "singleton")
 @Component
-public class PluviometricSensor {
+public class PluviometricSensor implements PluviometricSensorInterface {
     RequestHandler request = new RequestHandler();
     ValuesHandler handler = new ValuesHandler();
     private double pluviometricValue;

@@ -6,7 +6,7 @@ import sensors.humiditySensor.handler.RequestHandler;
 import sensors.humiditySensor.handler.ValuesHandler;
 @Scope(value = "singleton")
 @Component
-public class HumiditySensor {
+public class HumiditySensor implements HumiditySensorInterface {
     RequestHandler request = new RequestHandler();
     ValuesHandler handler = new ValuesHandler();
     private double humidityValue;

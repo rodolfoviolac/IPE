@@ -7,7 +7,7 @@ import sensors.luminositySensor.handler.ValuesHandler;
 
 @Scope(value = "singleton")
 @Component
-public class LuminositySensor {
+public class LuminositySensor implements LuminositySensorInterface {
     RequestHandler request = new RequestHandler();
     ValuesHandler handler = new ValuesHandler();
     private double luminosityValue;
