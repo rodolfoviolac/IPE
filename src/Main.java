@@ -24,5 +24,6 @@ public class Main {
        LoginController login =  new LoginController();
 
        login.showLoginWindow();
+
     }
 }
