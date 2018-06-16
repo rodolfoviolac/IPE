@@ -1,6 +1,6 @@
 package Model;
 
-public class Cover {
+public class Cover implements sensorUpdateValues{
 
 
     private boolean isOpen;
