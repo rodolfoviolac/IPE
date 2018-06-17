@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config />
     <bean id="springContext" class="Handlers.FrameWorkUtils.ApplicationContextProvider" />
-    <bean id="httpRequest" name="HttpRequest" class="Sensors.HttpRequest" scope="singleton">
+    <bean id="httpRequest" name="HttpRequest" class="Handlers.Http.HttpRequest" scope="singleton">
     </bean>
     <bean id="moisterSensor" name="MoisterSensor" class="Sensors.moisterSensor.MoisterSensor" scope="singleton">
     </bean>

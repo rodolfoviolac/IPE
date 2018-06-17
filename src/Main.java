@@ -1,21 +1,18 @@
-import EmulateSensors.Controller.EmulatorSensorController;
-import EmulateSensors.View.EmulateSensorForm;
-import Login.Controller.LoginController;
-import sensors.HttpRequest;
-import sensors.humiditySensor.HumiditySensor;
-import sensors.luminositySensor.LuminositySensor;
-import sensors.moisterSensor.MoisterSensor;
+import Handlers.FrameWorkUtils.ApplicationContextProvider;
+import Sensors.humiditySensor.HumiditySensor;
+import Sensors.luminositySensor.LuminositySensor;
+import Sensors.moisterSensor.MoisterSensor;
+import Sensors.phSensor.PhSensor;
+import Sensors.pluviometricSensor.PluviometricSensor;
+import Sensors.temperatureSensor.TemperatureSensor;
+import Sensors.weatherSensor.WeatherSensor;
+import UI.Login.Controller.LoginController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import sensors.phSensor.PhSensor;
-import sensors.pluviometricSensor.PluviometricSensor;
-import sensors.temperatureSensor.TemperatureSensor;
-import sensors.weatherSensor.WeatherSensor;
-import utils.ApplicationContextProvider;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Handlers/FrameWorkUtils/config.xml");
         ApplicationContextProvider contextProvider = new ApplicationContextProvider();
         contextProvider.setApplicationContext(context);
         MoisterSensor moister = (MoisterSensor) context.getBean("MoisterSensor");
