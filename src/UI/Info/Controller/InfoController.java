@@ -17,6 +17,7 @@ public class InfoController {
     private User currentUser;
     private JButton plowButton;
     private JButton stockButton;
+    private Plot user_plot()
 
 
     public InfoController(User currentUser) {

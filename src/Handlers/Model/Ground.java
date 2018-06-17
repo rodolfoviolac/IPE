@@ -7,6 +7,13 @@ public class Ground implements sensorUpdateValues{
     private double humidity;
     private Fertilizer fertilizer;
 
+
+    public Ground(){
+
+        this.fertilizer = null;
+
+    }
+
     @Override
     public void update(String name, Double newValue) {
         if (name == "ph"){

@@ -15,9 +15,13 @@ public class Plot {
     private Cover cover;
 
 
+    public Plot(){
 
-    public void irrigate(){
-
+        this.ID = 1;
+        this.area = 1000;
+        this.plantedSpecie = PlantSpecies.none;
+        this.ground = new Ground();
+        this.cover = new Cover();
 
     }
 

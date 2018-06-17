@@ -8,6 +8,10 @@ public class Cover implements sensorUpdateValues{
     private double temperature;
 
 
+    public Cover(){
+        this.isOpen = true;
+
+    }
     @Override
     public void update(String name, Double newValue) {
         if (name == "luminosity"){
