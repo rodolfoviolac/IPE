@@ -1,6 +1,4 @@
-import Handlers.DataBase.DB;
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
-import Handlers.Model.Fertilizer;
 import Sensors.humiditySensor.HumiditySensor;
 import Sensors.luminositySensor.LuminositySensor;
 import Sensors.moisterSensor.MoisterSensor;
@@ -9,11 +7,11 @@ import Sensors.pluviometricSensor.PluviometricSensor;
 import Sensors.temperatureSensor.TemperatureSensor;
 import Sensors.weatherSensor.WeatherSensor;
 import UI.Login.Controller.LoginController;
+import UI.Plow.Controller.PlowController;
+import UI.Plow.View.PlowForm;
+import UI.Stock.Controller.StockController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.List;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,5 +28,10 @@ public class Main {
 
        LoginController login =  new LoginController();
        login.showLoginWindow();
+
+//        StockController stock = new StockController();
+////        stock.showStockFormWindow();
+        PlowController plow = new PlowController();
+        plow.showPlowFormWindow();
     }
 }

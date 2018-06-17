@@ -17,8 +17,16 @@ public class DB implements DBInterface {
         return fertilizerDb.getFetilizersByIndex(index);
     }
 
+    public void addNewFetilizer(Fertilizer newFertilizer){
+        fertilizerDb.addFetilizer(newFertilizer);
+    }
+
     public boolean useFertilizer(String fertilizerName, int quantity){
         return fertilizerDb.useFertilizerQuantity(fertilizerName, quantity);
+    }
+
+    public boolean buyFertilizer(String fertilizerName, int quantity){
+        return fertilizerDb.addFertilizerQuantity(fertilizerName, quantity);
     }
 
 }

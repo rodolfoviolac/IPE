@@ -30,7 +30,7 @@ public class HttpRequest {
 
     private void performRequest(){
         try {
-            String API_URL = "https://plantingdecision.herokuapp.com/Sensors";
+            String API_URL = "http://plantingdecision.herokuapp.com/Sensors";
             URL url = new URL(API_URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setConnectTimeout(5000);
