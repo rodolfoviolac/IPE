@@ -26,11 +26,12 @@ public class Main {
         PluviometricSensor pluviometric = (PluviometricSensor) context.getBean("PluviometricSensor");
         WeatherSensor weather = (WeatherSensor) context.getBean("WeatherSensor");
 
-       LoginController login =  new LoginController();
-       login.showLoginWindow();
+        LoginController login =  new LoginController();
+        login.showLoginWindow();
 
-//        StockController stock = new StockController();
-////        stock.showStockFormWindow();
+        StockController stock = new StockController();
+      stock.showStockFormWindow();
+
         PlowController plow = new PlowController();
         plow.showPlowFormWindow();
     }

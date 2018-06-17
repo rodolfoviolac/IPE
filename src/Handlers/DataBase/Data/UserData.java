@@ -1,17 +1,21 @@
 package Handlers.DataBase.Data;
 import Handlers.Model.User;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 
 import java.util.Map;
 
-public class HandlerUserDB {
+@Scope(value = "singleton")
+@Component
+public class UserData {
 
     private Map<String, User> userDic;
 
-    private HandlerUserDB handler_UserDB_user;
+    private UserData handler_UserDB_user;
 
-    public HandlerUserDB(){
+    public UserData(){
         downLoadUsersFromSource();
     }
 
