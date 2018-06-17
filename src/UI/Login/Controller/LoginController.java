@@ -3,6 +3,7 @@ package UI.Login.Controller;
 import Handlers.DataBase.Data.HandlerUserDB;
 import UI.Emulator.Controller.EmulateSensorController;
 import Handlers.Model.User;
+import UI.Info.Controller.InfoController;
 import UI.Login.View.LoginFrame;
 
 import javax.swing.*;
@@ -58,7 +59,7 @@ public class LoginController{
             else{
                 loginFrame.setVisible(false);
                 new EmulateSensorController().showEmulatorSensorWindow();
-               // new InfoController();
+                new InfoController(user).showLoginWindow();
             }
 
         }
