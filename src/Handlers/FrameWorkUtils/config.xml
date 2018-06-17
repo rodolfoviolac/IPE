@@ -23,5 +23,6 @@
     </bean>
     <bean id="fertilizerData" name="FertilizerData" class="Handlers.DataBase.Data.FertilizerData" scope="singleton">
     </bean>
-
+    <bean id="userData" name="UserData" class="Handlers.DataBase.Data.UserData" scope="singleton">
+    </bean>
 </beans>

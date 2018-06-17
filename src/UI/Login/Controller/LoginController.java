@@ -1,6 +1,6 @@
 package UI.Login.Controller;
 
-import Handlers.DataBase.Data.HandlerUserDB;
+import Handlers.DataBase.Data.UserData;
 import UI.Emulator.Controller.EmulateSensorController;
 import Handlers.Model.User;
 import UI.Info.Controller.InfoController;
@@ -17,11 +17,11 @@ public class LoginController{
     private JButton confirmButton;
     private JTextField loginTextField;
     private JPasswordField passwordTextField;
-    private HandlerUserDB user_handler;
+    private UserData user_handler;
 
 
     public LoginController() {
-        this.user_handler = new HandlerUserDB();
+        this.user_handler = new UserData();
         loginFrame = new LoginFrame();
 
         this.initComponents();

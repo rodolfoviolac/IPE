@@ -15,10 +15,17 @@ public class InfoFrame extends JFrame{
     private JLabel pluviometricLabel;
     private JButton plowButton;
     private JButton stockButton;
+    private JProgressBar progressBar1;
+    private JLabel forecastLabel;
+    private JLabel coverLabel;
+    private JLabel irrigacaoLabel;
+    private JLabel moisterLabel;
+    private JButton colherButton;
+    private JButton plantarButton;
 
 
     public InfoFrame() throws HeadlessException {
-        setSize(600,600);
+        setSize(550,400);
         setTitle("UI/Login");
         setContentPane(infoPanel);
         setLocationRelativeTo(null);
