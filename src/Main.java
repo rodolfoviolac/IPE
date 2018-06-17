@@ -26,11 +26,8 @@ public class Main {
         PluviometricSensor pluviometric = (PluviometricSensor) context.getBean("PluviometricSensor");
         WeatherSensor weather = (WeatherSensor) context.getBean("WeatherSensor");
 
-//       LoginController login =  new LoginController();
-//       login.showLoginWindow();
-
-        EmulatorSensorController emulateSensor = new EmulatorSensorController();
-        emulateSensor.showEmulatorSensorWindow();
+       LoginController login =  new LoginController();
+       login.showLoginWindow();
 
 
     }

@@ -1,6 +1,8 @@
 package Login.Controller;
 
 import DataBase.HandlerUserDB;
+import EmulateSensors.Controller.EmulatorSensorController;
+import Info.Controller.InfoController;
 import Model.User;
 import Login.View.LoginFrame;
 
@@ -52,14 +54,12 @@ public class LoginController{
 
             }
             else if (!user.getPassword().equals(new String(passwordTextField.getPassword()))){
-
                 JOptionPane.showMessageDialog(null, "Senha incorreta.");
-
             }
-
             else{
-
-
+                loginFrame.setVisible(false);
+                new EmulatorSensorController().showEmulatorSensorWindow();
+               // new InfoController();
             }
 
         }
