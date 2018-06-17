@@ -2,8 +2,10 @@ package sensors.weatherSensor.handler;
 
 import org.json.JSONObject;
 import sensors.HttpRequest;
+import utils.ApplicationContextProvider;
 
 public class PerformRequest {
+    HttpRequest request = ApplicationContextProvider.getApplicationContext().getBean("httpRequest", HttpRequest.class);
     public PerformRequest() {}
     public String getWeather() {
         String weatherValue = "";
@@ -47,7 +49,6 @@ public class PerformRequest {
 
 
     private JSONObject performRequest(){
-        HttpRequest request = new HttpRequest();
         JSONObject responseObjct = new JSONObject();
         try {
             responseObjct = request.requestSensors();

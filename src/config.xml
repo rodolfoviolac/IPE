@@ -4,7 +4,9 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config />
-
+    <bean id="springContext" class="utils.ApplicationContextProvider" />
+    <bean id="httpRequest" name="HttpRequest" class="sensors.HttpRequest" scope="singleton">
+    </bean>
     <bean id="moisterSensor" name="MoisterSensor" class="sensors.moisterSensor.MoisterSensor" scope="singleton">
     </bean>
     <bean id="temperatureSensor" name="TemperatureSensor" class="sensors.temperatureSensor.TemperatureSensor" scope="singleton">
@@ -19,5 +21,4 @@
     </bean>
     <bean id="weatherSensor" name="WeatherSensor" class="sensors.weatherSensor.WeatherSensor" scope="singleton">
     </bean>
-    <bean id="springContext" class="utils.ApplicationContextProvider" />
 </beans>

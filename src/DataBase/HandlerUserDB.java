@@ -26,7 +26,7 @@ public class HandlerUserDB {
         userDic = new HashMap<String, User>();
 
         User lucio = new User("1","Lucio Franco","lucio.lpf", "lucinho");
-        User rodolfo = new User("2","Rodolfo Viola","rodolfo.v", "rodolfinho");
+        User rodolfo = new User("2","Rodolfo Viola","rodolfo", "rodolfo");
 
         this.userDic.put(lucio.getLogin(), lucio);
         this.userDic.put(rodolfo.getLogin(), rodolfo);

@@ -1,6 +1,9 @@
 package sensors.moisterSensor.handler;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import sensors.HttpRequest;
+import utils.ApplicationContextProvider;
+
 import java.util.Date;
 
 @Scope(value = "singleton")

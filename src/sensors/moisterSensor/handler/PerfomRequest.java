@@ -1,11 +1,12 @@
 package sensors.moisterSensor.handler;
 import sensors.HttpRequest;
+import utils.ApplicationContextProvider;
 
 public class PerfomRequest {
+    HttpRequest request = ApplicationContextProvider.getApplicationContext().getBean("httpRequest", HttpRequest.class);
     public PerfomRequest() {}
     public double getSoilMoisture() {
         double soilMoistureValue = 0;
-        HttpRequest request = new HttpRequest();
         try {
             soilMoistureValue = request.requestSensors().getDouble("soilMoisture");
         }catch (Exception e) {

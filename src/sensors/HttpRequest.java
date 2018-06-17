@@ -37,7 +37,7 @@ public class HttpRequest {
             conn.setRequestMethod("GET");
             InputStream in = new BufferedInputStream(conn.getInputStream());
             String result = org.apache.commons.io.IOUtils.toString(in, "UTF-8");
-//            System.out.println(result);
+            System.out.println(result);
             sensorResponse = new JSONObject(result);
             in.close();
             conn.disconnect();

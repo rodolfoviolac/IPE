@@ -1,11 +1,12 @@
 package sensors.luminositySensor.handler;
 import sensors.HttpRequest;
+import utils.ApplicationContextProvider;
 
 public class PerfomRequest {
+    HttpRequest request = ApplicationContextProvider.getApplicationContext().getBean("httpRequest", HttpRequest.class);
     public PerfomRequest() {}
     public double getLuminosity() {
         double LuminosityValue = 0;
-        HttpRequest request = new HttpRequest();
         try {
             LuminosityValue = request.requestSensors().getDouble("luminosity");
         }catch (Exception e) {
