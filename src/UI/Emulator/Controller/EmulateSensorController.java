@@ -1,7 +1,7 @@
-package UI.EmulateSensors.Controller;
+package UI.Emulator.Controller;
 
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
-import UI.EmulateSensors.View.EmulateSensorForm;
+import UI.Emulator.View.EmulateSensorForm;
 import org.springframework.stereotype.Component;
 import Sensors.humiditySensor.HumiditySensor;
 import Sensors.luminositySensor.LuminositySensor;
@@ -13,16 +13,18 @@ import Sensors.weatherSensor.WeatherSensor;
 
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 @Component
-public class EmulatorSensorController {
-    MoisterSensor moister = ApplicationContextProvider.getApplicationContext().getBean("moisterSensor", MoisterSensor.class);
-    TemperatureSensor temperature = ApplicationContextProvider.getApplicationContext().getBean("temperatureSensor", TemperatureSensor.class);
-    HumiditySensor humidity = ApplicationContextProvider.getApplicationContext().getBean("humiditySensor", HumiditySensor.class);
-    PhSensor ph = ApplicationContextProvider.getApplicationContext().getBean("phSensor", PhSensor.class);
-    LuminositySensor luminosity = ApplicationContextProvider.getApplicationContext().getBean("luminositySensor", LuminositySensor.class);
-    PluviometricSensor pluviometric = ApplicationContextProvider.getApplicationContext().getBean("pluviometricSensor", PluviometricSensor.class);
-    WeatherSensor weather = ApplicationContextProvider.getApplicationContext().getBean("weatherSensor", WeatherSensor.class);
+public class EmulateSensorController {
+    private MoisterSensor moister = ApplicationContextProvider.getApplicationContext().getBean("moisterSensor", MoisterSensor.class);
+    private TemperatureSensor temperature = ApplicationContextProvider.getApplicationContext().getBean("temperatureSensor", TemperatureSensor.class);
+    private HumiditySensor humidity = ApplicationContextProvider.getApplicationContext().getBean("humiditySensor", HumiditySensor.class);
+    private PhSensor ph = ApplicationContextProvider.getApplicationContext().getBean("phSensor", PhSensor.class);
+    private LuminositySensor luminosity = ApplicationContextProvider.getApplicationContext().getBean("luminositySensor", LuminositySensor.class);
+    private PluviometricSensor pluviometric = ApplicationContextProvider.getApplicationContext().getBean("pluviometricSensor", PluviometricSensor.class);
+    private WeatherSensor weather = ApplicationContextProvider.getApplicationContext().getBean("weatherSensor", WeatherSensor.class);
     private EmulateSensorForm EmulateSensorsJPanel;
     private JTextField luminosityTextField;
     private JTextField humidityTextField;
@@ -35,9 +37,10 @@ public class EmulatorSensorController {
     private JComboBox weatherComboBox;
 
 
-    public EmulatorSensorController() {
+    public EmulateSensorController() {
         EmulateSensorsJPanel = new EmulateSensorForm();
         this.initComponents();
+        this.initializerListeners();
         updateSensorsTextFields();
     }
 
@@ -60,6 +63,23 @@ public class EmulatorSensorController {
         this.phTextField.setText(Double.toString(ph.getPhValue()));
         this.pluviometricTextField.setText(Double.toString(pluviometric.getPluviometricValue()));
         this.temperatureTextField.setText(Double.toString(temperature.getTemperatureValue()));
+    }
+
+    private void initializerListeners(){
+        updateButton.addActionListener(new updateButtonListener());
+    }
+    private class updateButtonListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            luminosity.setLuminosityValue(Double.parseDouble(luminosityTextField.getText()));
+            temperature.setTemperatureValue(Double.parseDouble(temperatureTextField.getText()));
+            moister.setMoisterValue(Double.parseDouble(moisterTextField.getText()));
+            ph.setPhValue(Double.parseDouble(phTextField.getText()));
+            pluviometric.setPluviometricValue(Double.parseDouble(pluviometricTextField.getText()));
+            humidity.setHumidityValue(Double.parseDouble(humidityTextField.getText()));
+            weather.setWeatherValue((String) weatherComboBox.getSelectedItem());
+            weather.setForecastValue((String) forecastComboBox.getSelectedItem());
+        }
     }
 
     public void showEmulatorSensorWindow(){

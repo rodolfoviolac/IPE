@@ -7,6 +7,8 @@
     <bean id="springContext" class="Handlers.FrameWorkUtils.ApplicationContextProvider" />
     <bean id="httpRequest" name="HttpRequest" class="Handlers.Http.HttpRequest" scope="singleton">
     </bean>
+    <bean id="weatherSensor" name="WeatherSensor" class="Sensors.weatherSensor.WeatherSensor" scope="singleton">
+    </bean>
     <bean id="moisterSensor" name="MoisterSensor" class="Sensors.moisterSensor.MoisterSensor" scope="singleton">
     </bean>
     <bean id="temperatureSensor" name="TemperatureSensor" class="Sensors.temperatureSensor.TemperatureSensor" scope="singleton">
@@ -19,6 +21,7 @@
     </bean>
     <bean id="pluviometricSensor" name="PluviometricSensor" class="Sensors.pluviometricSensor.PluviometricSensor" scope="singleton">
     </bean>
-    <bean id="weatherSensor" name="WeatherSensor" class="Sensors.weatherSensor.WeatherSensor" scope="singleton">
+    <bean id="fertilizerData" name="FertilizerData" class="Handlers.DataBase.Data.FertilizerData" scope="singleton">
     </bean>
+
 </beans>

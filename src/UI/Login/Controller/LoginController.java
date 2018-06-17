@@ -1,7 +1,7 @@
 package UI.Login.Controller;
 
-import Handlers.DataBase.HandlerUserDB;
-import UI.EmulateSensors.Controller.EmulatorSensorController;
+import Handlers.DataBase.Data.HandlerUserDB;
+import UI.Emulator.Controller.EmulateSensorController;
 import Handlers.Model.User;
 import UI.Login.View.LoginFrame;
 
@@ -57,7 +57,7 @@ public class LoginController{
             }
             else{
                 loginFrame.setVisible(false);
-                new EmulatorSensorController().showEmulatorSensorWindow();
+                new EmulateSensorController().showEmulatorSensorWindow();
                // new InfoController();
             }
 

@@ -6,6 +6,7 @@ public interface WeatherSensorInterface {
     String getWeatherValue();
     String getForecastValue();
     void setWeatherValue(String newValue);
+    void setForecastValue(String newValue);
     int getWeatherId();
     void setWeatherId(int newValue);
     int getForecastId();

@@ -38,7 +38,19 @@ public class WeatherSensor implements WeatherSensorInterface {
     }
 
     public void setWeatherValue(String newValue) {
-        if(handler.weatherSetHandler(newValue)) weatherValue = newValue;
+        int weatherId = handler.weatherSetHandler(newValue);
+        if(weatherId>1){
+          this.setWeatherId(weatherId);
+          weatherValue = newValue;
+        }
+    }
+
+    public void setForecastValue(String newValue) {
+        int forecastId = handler.forecastSetHandler(newValue);
+        if(forecastId>1){
+            this.setForecastId(forecastId);
+            forecastValue = newValue;
+        }
     }
 
     public int getWeatherId() {

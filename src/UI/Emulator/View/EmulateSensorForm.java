@@ -1,4 +1,4 @@
-package UI.EmulateSensors.View;
+package UI.Emulator.View;
 
 import javax.swing.*;
 import java.awt.*;

@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 public class MoisterSensor implements MoisterSensorInterface {
     RequestHandler request = new RequestHandler();
     ValuesHandler handler = new ValuesHandler();
-    @Value("0")
     private double moisterValue;
 
     private MoisterSensor(){
