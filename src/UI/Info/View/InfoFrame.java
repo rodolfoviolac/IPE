@@ -25,7 +25,7 @@ public class InfoFrame extends JFrame{
     private JLabel plantedSpecie;
 
     public InfoFrame() throws HeadlessException {
-        setSize(550,400);
+        setSize(850,400);
         setTitle("Lote");
         setContentPane(infoPanel);
         setLocationRelativeTo(null);
@@ -78,4 +78,25 @@ public class InfoFrame extends JFrame{
     public void setPluviometricLabelText(String pluviometric) {
         this.pluviometricLabel.setText(pluviometric);
     }
+
+    public void setProgressBar(int val) {
+        this.progressBar1.setValue(val);
+    }
+
+    public void setForecastLabel(String forecast) {
+        this.forecastLabel.setText(forecast);
+    }
+
+    public void setCoverLabel(String cover) {
+        this.coverLabel.setText(cover);
+    }
+
+    public void setIrrigacaoLabel(String irrigacao) {
+        this.irrigacaoLabel.setText(irrigacao);
+    }
+
+    public void setMoisterLabel(String moister) {
+        this.moisterLabel.setText(moister);
+    }
+
 }

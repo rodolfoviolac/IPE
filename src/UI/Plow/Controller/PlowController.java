@@ -3,6 +3,7 @@ package UI.Plow.Controller;
 import Handlers.DataBase.DB;
 import Handlers.Model.Fertilizer;
 import Handlers.Model.Plot;
+import Handlers.Observers.Observers;
 import UI.Plow.View.PlowForm;
 
 import javax.swing.*;
@@ -55,7 +56,10 @@ public class PlowController {
                 if(transaction){
                     plot.plow(db.getFertilizerById((String) FertilizerNameComboBox.getSelectedItem()));
                     updateTextFields();
+                    Observers ob = new Observers();
+                    ob.syncAllTextFields();
                     plowForm.setVisible(false);
+
                 }
                 else {
                     JOptionPane.showMessageDialog(null, "This is not possible. You dont have enough on stock! ");

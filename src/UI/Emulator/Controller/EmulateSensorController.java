@@ -1,6 +1,7 @@
 package UI.Emulator.Controller;
 
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
+import Handlers.Observers.Observers;
 import UI.Emulator.View.EmulateSensorForm;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -58,7 +59,7 @@ public class EmulateSensorController {
         this.updateButton = EmulateSensorsJPanel.getUpdateButton();
     }
 
-    private void updateSensorsTextFields() {
+    public void updateSensorsTextFields() {
         this.luminosityTextField.setText(Double.toString(luminosity.getLuminosityValue()));
         this.humidityTextField.setText(Double.toString(humidity.getHumidityValue()));
         this.moisterTextField.setText(Double.toString(moister.getMoisterValue()));
@@ -81,6 +82,8 @@ public class EmulateSensorController {
             humidity.setHumidityValue(Double.parseDouble(humidityTextField.getText()));
             weather.setWeatherValue((String) weatherComboBox.getSelectedItem());
             weather.setForecastValue((String) forecastComboBox.getSelectedItem());
+            Observers ob = new Observers();
+            ob.syncAllTextFields();
         }
     }
 

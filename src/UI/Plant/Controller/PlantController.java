@@ -4,6 +4,7 @@ import Handlers.DataBase.DB;
 import Handlers.Enum.PlantSpecies;
 import Handlers.Model.Fertilizer;
 import Handlers.Model.Plot;
+import Handlers.Observers.Observers;
 import UI.Plant.View.PlantFrame;
 import UI.Plow.Controller.PlowController;
 
@@ -61,7 +62,8 @@ private class confirmButtonListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         plot.plant((PlantSpecies) comboBox.getSelectedItem());
-
+        Observers ob = new Observers();
+        ob.syncAllTextFields();
         plantFrame.setVisible(false);
 
     }

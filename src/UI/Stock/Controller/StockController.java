@@ -49,7 +49,7 @@ public class StockController {
         this.fertilizerNameComboBox = StockFormJpanel.getFertilizerNameComboBox();
     }
 
-    private void updateTextFields(){
+    public void updateTextFields(){
         DB db = new DB();
         Set<String> allFertilizer = db.getAllFertilizer();
         String[] columnNames = {"Name", "Brand", "Valid", "Quantity in Stock"};
