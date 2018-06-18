@@ -37,9 +37,6 @@ public class Main {
         LoginController login =  new LoginController();
         login.showLoginWindow();
 
-        Predict result = new Predict();
-        System.out.println(result.getPlantingPredict());
-
 
     }
 }
