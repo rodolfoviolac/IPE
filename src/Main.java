@@ -1,4 +1,5 @@
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
+import Handlers.Http.handler.Predict;
 import Handlers.Model.Plot;
 import Sensors.humiditySensor.HumiditySensor;
 import Sensors.luminositySensor.LuminositySensor;
@@ -35,6 +36,9 @@ public class Main {
         System.out.print(plot.getLuminosity());
         LoginController login =  new LoginController();
         login.showLoginWindow();
+
+        Predict result = new Predict();
+        System.out.println(result.getPlantingPredict());
 
 
 
