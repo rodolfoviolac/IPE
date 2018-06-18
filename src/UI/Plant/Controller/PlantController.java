@@ -25,8 +25,8 @@ public class PlantController {
     public PlantController(Plot plot){
 
         this.plot = plot;
-        this.plantFrame.setTitle("Escolha de espécie");
         this.plantFrame = new PlantFrame();
+        this.plantFrame.setTitle("Escolha de espécie");
         this.initComponents();
         this.initializerListeners();
 
