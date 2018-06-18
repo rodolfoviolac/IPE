@@ -34,6 +34,7 @@ public class Plot {
 
         this.ID = 1;
         this.area = 1000;
+        this.status = PlotStatus.readyToPlant;
         this.plantedSpecie = PlantSpecies.Nenhum;
         this.ground = new Ground();
         this.cover = new Cover();
@@ -61,6 +62,16 @@ public class Plot {
         this.status = PlotStatus.readyToPlow;
     }
 
+    public void plant(PlantSpecies specie){
+
+        this.status = PlotStatus.readyToHarvest;
+        this.plantedSpecie = specie;
+    }
+
+    public void plow(Fertilizer usedFertilizer){
+        this.status = PlotStatus.readyToPlant;
+        this.ground.setFertilizer(usedFertilizer);
+    }
 
 
 }

@@ -15,6 +15,10 @@ public class Ground implements sensorUpdateValues{
 
     }
 
+    public void setFertilizer(Fertilizer fertilizer) {
+        this.fertilizer = fertilizer;
+    }
+
     @Override
     public void update(String name, Double newValue) {
         if (name == "ph"){

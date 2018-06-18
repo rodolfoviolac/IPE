@@ -2,6 +2,7 @@ package UI.Plow.Controller;
 
 import Handlers.DataBase.DB;
 import Handlers.Model.Fertilizer;
+import Handlers.Model.Plot;
 import UI.Plow.View.PlowForm;
 
 import javax.swing.*;
@@ -14,10 +15,13 @@ public class PlowController {
     private PlowForm PlowForm;
     private JTextField quantityTextField;
     private JButton startButton;
+    private Plot plot;
 
-    public PlowController() {
+    public PlowController(Plot plot) {
         PlowForm = new PlowForm();
+        PlowForm.setTitle("Arador Automâtico");
         this.initComponents();
+        this.plot = plot;
         updateTextFields();
         initializerListeners();
     }
@@ -49,6 +53,7 @@ public class PlowController {
                 DB db = new DB();
                 boolean transaction = db.useFertilizer((String)FertilizerNameComboBox.getSelectedItem(), Integer.parseInt(quantityTextField.getText()));
                 if(transaction){
+                    plot.plow((Fertilizer) FertilizerNameComboBox.getSelectedItem());
                     updateTextFields();
                 }
                 else {

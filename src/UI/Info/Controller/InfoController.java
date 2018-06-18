@@ -4,6 +4,7 @@ import Handlers.Enum.PlotStatus;
 import Handlers.Model.Plot;
 import Handlers.Model.User;
 import UI.Info.View.InfoFrame;
+import UI.Plant.Controller.PlantController;
 import UI.Plow.Controller.PlowController;
 import UI.Stock.Controller.StockController;
 
@@ -74,7 +75,7 @@ public class InfoController {
             }
 
             else{
-                PlowController plow = new PlowController();
+                PlowController plow = new PlowController(plot);
                 plow.showPlowFormWindow();
             }
 
@@ -122,7 +123,7 @@ public class InfoController {
 
             else{
 
-
+                new PlantController(plot).showWindow();
 
             }
 
