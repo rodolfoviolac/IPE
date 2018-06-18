@@ -28,6 +28,7 @@ public class StockController {
     public StockController(){
         StockFormJpanel = new StockForm();
         this.initComponents();
+        this.StockFormJpanel.setTitle("Estoque");
         updateTextFields();
         initializerListeners();
     }

@@ -28,6 +28,7 @@ public class InfoController {
 
     public InfoController(User currentUser) {
         infoFrame = new InfoFrame();
+        infoFrame.setTitle("Informações");
         this.currentUser = currentUser;
         this.initComponents();
         this.initializerListeners();
