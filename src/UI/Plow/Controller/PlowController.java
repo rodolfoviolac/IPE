@@ -15,11 +15,11 @@ public class PlowController {
     private PlowForm PlowForm;
     private JTextField quantityTextField;
     private JButton startButton;
+    private PlowForm plowForm = new PlowForm();
     private Plot plot;
 
     public PlowController(Plot plot) {
-        PlowForm = new PlowForm();
-        PlowForm.setTitle("Arador Automâtico");
+        plowForm.setTitle("Arador Automâtico");
         this.initComponents();
         this.plot = plot;
         updateTextFields();
@@ -27,9 +27,9 @@ public class PlowController {
     }
 
     public void initComponents(){
-        this.startButton = PlowForm.getStartButton();
-        this.quantityTextField = PlowForm.getQuantityTextField();
-        this.FertilizerNameComboBox = PlowForm.getFertilizerNameComboBox();
+        this.startButton = plowForm.getStartButton();
+        this.quantityTextField = plowForm.getQuantityTextField();
+        this.FertilizerNameComboBox = plowForm.getFertilizerNameComboBox();
     }
 
     public void updateTextFields(){
@@ -53,8 +53,9 @@ public class PlowController {
                 DB db = new DB();
                 boolean transaction = db.useFertilizer((String)FertilizerNameComboBox.getSelectedItem(), Integer.parseInt(quantityTextField.getText()));
                 if(transaction){
-                    plot.plow((Fertilizer) FertilizerNameComboBox.getSelectedItem());
+                    plot.plow(db.getFertilizerById((String) FertilizerNameComboBox.getSelectedItem()));
                     updateTextFields();
+                    plowForm.setVisible(false);
                 }
                 else {
                     JOptionPane.showMessageDialog(null, "This is not possible. You dont have enough on stock! ");
@@ -63,6 +64,6 @@ public class PlowController {
         }
     }
     public void showPlowFormWindow(){
-        PlowForm.setVisible(true);
+        plowForm.setVisible(true);
     }
 }
