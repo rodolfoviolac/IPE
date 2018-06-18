@@ -2,6 +2,7 @@ package UI.Emulator.Controller;
 
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
 import UI.Emulator.View.EmulateSensorForm;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import Sensors.humiditySensor.HumiditySensor;
 import Sensors.luminositySensor.LuminositySensor;
@@ -16,6 +17,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+@Scope(value = "singleton")
 @Component
 public class EmulateSensorController {
     private MoisterSensor moister = ApplicationContextProvider.getApplicationContext().getBean("moisterSensor", MoisterSensor.class);

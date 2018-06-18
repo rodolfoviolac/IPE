@@ -25,4 +25,10 @@
     </bean>
     <bean id="userData" name="UserData" class="Handlers.DataBase.Data.UserData" scope="singleton">
     </bean>
+    <bean id="stockController" name="StockController" class="UI.Stock.Controller.StockController" scope="singleton">
+    </bean>
+    <bean id="emulateSensorController" name="EmulateSensorController" class="UI.Emulator.Controller.EmulateSensorController" scope="singleton">
+    </bean>
+    <bean id="infoController" name="InfoController" class="UI.Info.Controller.InfoController" scope="singleton">
+    </bean>
 </beans>

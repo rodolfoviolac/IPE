@@ -14,8 +14,11 @@ public class UserData {
     private Map<String, User> userDic;
 
     private UserData handler_UserDB_user;
+    private User LogedUserIndex;
 
     public UserData(){
+        User initUser = new User("none", "none","none", "none");
+        setLogedUser(initUser);
         downLoadUsersFromSource();
     }
 
@@ -26,6 +29,14 @@ public class UserData {
         User rodolfo = new User("2","Rodolfo Viola","rodolfo", "rodolfo");
         this.userDic.put(lucio.getLogin(), lucio);
         this.userDic.put(rodolfo.getLogin(), rodolfo);
+    }
+
+    public void setLogedUser(User user){
+        LogedUserIndex = user;
+    }
+
+    public User getLogedUser(){
+        return LogedUserIndex;
     }
 
     public User userWithParams(String login){

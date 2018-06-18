@@ -3,6 +3,8 @@ package UI.Stock.Controller;
 import Handlers.DataBase.DB;
 import Handlers.Model.Fertilizer;
 import UI.Stock.View.StockForm;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -13,6 +15,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
+@Scope(value = "singleton")
+@Component
 public class StockController {
     private JTable stockTable;
     private StockForm StockFormJpanel;

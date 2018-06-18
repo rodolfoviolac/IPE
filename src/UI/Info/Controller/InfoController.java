@@ -1,12 +1,17 @@
 package UI.Info.Controller;
 
+import Handlers.DataBase.DB;
+import Handlers.DataBase.Data.UserData;
 import Handlers.Enum.PlotStatus;
+import Handlers.FrameWorkUtils.ApplicationContextProvider;
 import Handlers.Model.Plot;
 import Handlers.Model.User;
 import UI.Info.View.InfoFrame;
 import UI.Plant.Controller.PlantController;
 import UI.Plow.Controller.PlowController;
 import UI.Stock.Controller.StockController;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 
 import javax.swing.*;
@@ -14,11 +19,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-
+@Scope(value = "singleton")
+@Component
 public class InfoController {
 
     private InfoFrame infoFrame;
-    private User currentUser;
+    private StockController stockController = ApplicationContextProvider.getApplicationContext().getBean("stockController", StockController.class);
     private JButton plowButton;
     private JButton stockButton;
     private JButton plantButton;
@@ -26,33 +32,33 @@ public class InfoController {
     private Plot plot = new Plot();
 
 
-    public InfoController(User currentUser) {
+    public InfoController() {
         infoFrame = new InfoFrame();
         infoFrame.setTitle("Informações");
-        this.currentUser = currentUser;
         this.initComponents();
         this.initializerListeners();
     }
 
     public void showLoginWindow(){
-
+        updater();
         infoFrame.setVisible(true);
+    }
+
+    public void updater(){
+        DB db = new DB();
+        this.infoFrame.setPlantedSpecieLabelText(this.plot.getPlantedSpecie().name());
+        this.infoFrame.setUserNameLabelText(db.getLogedUser().getName());
     }
 
 
     private void initComponents(){
-
+        DB db = new DB();
         this.plowButton = infoFrame.getPlowButton();
         this.stockButton = infoFrame.getStockButton();
         this.harvestButton = infoFrame.getColherButton();
         this.plantButton = infoFrame.getPlantarButton();
-
         this.infoFrame.setPlantedSpecieLabelText(this.plot.getPlantedSpecie().name());
-        this.infoFrame.setUserNameLabelText(currentUser.getName());
-
-
-        System.out.print(plot.getLuminosity());
-
+        this.infoFrame.setUserNameLabelText(db.getLogedUser().getName());
 
     }
     private void initializerListeners(){
@@ -86,9 +92,7 @@ public class InfoController {
     private class stockButtonListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            StockController stock = new StockController();
-            stock.showStockFormWindow();
+            stockController.showStockFormWindow();
         }
     }
     private class harvestButtonListener implements ActionListener{
