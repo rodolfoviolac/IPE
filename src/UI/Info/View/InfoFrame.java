@@ -22,13 +22,21 @@ public class InfoFrame extends JFrame{
     private JLabel moisterLabel;
     private JButton colherButton;
     private JButton plantarButton;
-
+    private JLabel plantedSpecie;
 
     public InfoFrame() throws HeadlessException {
         setSize(550,400);
-        setTitle("UI/Login");
+        setTitle("Lote");
         setContentPane(infoPanel);
         setLocationRelativeTo(null);
+    }
+
+    public JButton getColherButton() {
+        return colherButton;
+    }
+
+    public JButton getPlantarButton() {
+        return plantarButton;
     }
 
     public JButton getPlowButton() {
@@ -39,31 +47,35 @@ public class InfoFrame extends JFrame{
         return stockButton;
     }
 
-    public void setUserNameLabel(JLabel userNameLabel) {
-        this.userNameLabel = userNameLabel;
+    public void setUserNameLabelText(String userName) {
+        this.userNameLabel.setText(userName);
     }
 
-    public void setLuminosityLabel(JLabel luminosityLabel) {
-        this.luminosityLabel = luminosityLabel;
+    public void setPlantedSpecieLabelText(String plantedSpecie) {
+        this.plantedSpecie.setText(plantedSpecie);
     }
 
-    public void setHumidityLabel(JLabel humidityLabel) {
-        this.humidityLabel = humidityLabel;
+    public void setLuminosityLabelText(String luminosity) {
+        this.luminosityLabel.setText(luminosity);
     }
 
-    public void setTemperatureLabel(JLabel temperatureLabel) {
-        this.temperatureLabel = temperatureLabel;
+    public void setHumidityLabelText(String humidity) {
+        this.humidityLabel.setText(humidity);
     }
 
-    public void setPhLabel(JLabel phLabel) {
-        this.phLabel = phLabel;
+    public void setTemperatureLabelText(String temperature) {
+        this.temperatureLabel.setText(temperature);
     }
 
-    public void setWeatherLabel(JLabel weatherLabel) {
-        this.weatherLabel = weatherLabel;
+    public void setPhLabelLabelText(String ph) {
+        this.phLabel.setText(ph);
     }
 
-    public void setPluviometricLabel(JLabel pluviometricLabel) {
-        this.pluviometricLabel = pluviometricLabel;
+    public void setWeatherLabelText(String weather) {
+        this.weatherLabel.setText(weather);
+    }
+
+    public void setPluviometricLabelText(String pluviometric) {
+        this.pluviometricLabel.setText(pluviometric);
     }
 }

@@ -13,7 +13,7 @@ public class LoginFrame extends JFrame {
 
     public LoginFrame() throws HeadlessException {
         setSize(300,200);
-        setTitle("UI/Login");
+        setTitle("Login");
         setContentPane(loginPanel);
         setLocationRelativeTo(null);
     }

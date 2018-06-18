@@ -1,4 +1,5 @@
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
+import Handlers.Model.Plot;
 import Sensors.humiditySensor.HumiditySensor;
 import Sensors.luminositySensor.LuminositySensor;
 import Sensors.moisterSensor.MoisterSensor;
@@ -17,6 +18,10 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Handlers/FrameWorkUtils/config.xml");
         ApplicationContextProvider contextProvider = new ApplicationContextProvider();
+
+
+        Plot plot = new Plot();
+
         contextProvider.setApplicationContext(context);
         MoisterSensor moister = (MoisterSensor) context.getBean("MoisterSensor");
         TemperatureSensor temperature = (TemperatureSensor) context.getBean("TemperatureSensor");
@@ -26,13 +31,13 @@ public class Main {
         PluviometricSensor pluviometric = (PluviometricSensor) context.getBean("PluviometricSensor");
         WeatherSensor weather = (WeatherSensor) context.getBean("WeatherSensor");
 
+
+        System.out.print(plot.getLuminosity());
         LoginController login =  new LoginController();
         login.showLoginWindow();
 
-        StockController stock = new StockController();
-      stock.showStockFormWindow();
 
-        PlowController plow = new PlowController();
-        plow.showPlowFormWindow();
+
+
     }
 }

@@ -14,15 +14,35 @@ public class Plot {
     private Ground ground;
     private Cover cover;
 
+    public int getID() {
+        return ID;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public PlantSpecies getPlantedSpecie() {
+        return plantedSpecie;
+    }
+
+    public PlotStatus getStatus() {
+        return status;
+    }
 
     public Plot(){
 
         this.ID = 1;
         this.area = 1000;
-        this.plantedSpecie = PlantSpecies.none;
+        this.plantedSpecie = PlantSpecies.Nenhum;
         this.ground = new Ground();
         this.cover = new Cover();
 
+    }
+
+    public double getLuminosity(){
+
+        return cover.getLuminosity();
     }
 
     public void cover(){
@@ -34,5 +54,13 @@ public class Plot {
 
 
     }
+
+    public void harvest(){
+
+        this.plantedSpecie = PlantSpecies.Nenhum;
+        this.status = PlotStatus.readyToPlow;
+    }
+
+
 
 }

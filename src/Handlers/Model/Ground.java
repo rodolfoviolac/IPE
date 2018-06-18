@@ -12,6 +12,7 @@ public class Ground implements sensorUpdateValues{
 
         this.fertilizer = null;
 
+
     }
 
     @Override

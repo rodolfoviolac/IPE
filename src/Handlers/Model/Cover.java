@@ -14,6 +14,7 @@ public class Cover implements sensorUpdateValues{
     }
     @Override
     public void update(String name, Double newValue) {
+
         if (name == "luminosity"){
             this.luminosity = newValue;
         }
@@ -22,4 +23,15 @@ public class Cover implements sensorUpdateValues{
         }
     }
 
+    public boolean isOpen() {
+        return isOpen;
+    }
+
+    public double getLuminosity() {
+        return luminosity;
+    }
+
+    public double getTemperature() {
+        return temperature;
+    }
 }
