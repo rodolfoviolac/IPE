@@ -77,7 +77,6 @@ public class EmulateSensorController {
         plotDelegate.updatePluviometric(Double.parseDouble(pluviometricTextField.getText()));
         plotDelegate.updateWeather(this.weather.getWeatherValue());
         plotDelegate.updateForcast(this.weather.getForecastValue());
-
     }
 
     private void initializerListeners(){
@@ -86,23 +85,49 @@ public class EmulateSensorController {
     private class updateButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            luminosity.setLuminosityValue(Double.parseDouble(luminosityTextField.getText()));
-            temperature.setTemperatureValue(Double.parseDouble(temperatureTextField.getText()));
-            moister.setMoisterValue(Double.parseDouble(moisterTextField.getText()));
-            ph.setPhValue(Double.parseDouble(phTextField.getText()));
-            pluviometric.setPluviometricValue(Double.parseDouble(pluviometricTextField.getText()));
-            humidity.setHumidityValue(Double.parseDouble(humidityTextField.getText()));
-            weather.setWeatherValue((String) weatherComboBox.getSelectedItem());
-            weather.setForecastValue((String) forecastComboBox.getSelectedItem());
-            plotDelegate.updateHumidity(Double.parseDouble(humidityTextField.getText()));
-            plotDelegate.updateLuminosity(Double.parseDouble(luminosityTextField.getText()));
-            plotDelegate.updateMoister(Double.parseDouble(moisterTextField.getText()));
-            plotDelegate.updatePH(Double.parseDouble(phTextField.getText()));
-            plotDelegate.updateTemperature(Double.parseDouble(temperatureTextField.getText()));
-            plotDelegate.updatePluviometric(Double.parseDouble(pluviometricTextField.getText()));
-            plotDelegate.updateWeather((String) weatherComboBox.getSelectedItem());
-            plotDelegate.updateForcast((String) forecastComboBox.getSelectedItem());
+            if(validSensors()){
+                luminosity.setLuminosityValue(Double.parseDouble(luminosityTextField.getText()));
+                temperature.setTemperatureValue(Double.parseDouble(temperatureTextField.getText()));
+                moister.setMoisterValue(Double.parseDouble(moisterTextField.getText()));
+                ph.setPhValue(Double.parseDouble(phTextField.getText()));
+                pluviometric.setPluviometricValue(Double.parseDouble(pluviometricTextField.getText()));
+                humidity.setHumidityValue(Double.parseDouble(humidityTextField.getText()));
+                weather.setWeatherValue((String) weatherComboBox.getSelectedItem());
+                weather.setForecastValue((String) forecastComboBox.getSelectedItem());
+                plotDelegate.updateHumidity(Double.parseDouble(humidityTextField.getText()));
+                plotDelegate.updateLuminosity(Double.parseDouble(luminosityTextField.getText()));
+                plotDelegate.updateMoister(Double.parseDouble(moisterTextField.getText()));
+                plotDelegate.updatePH(Double.parseDouble(phTextField.getText()));
+                plotDelegate.updateTemperature(Double.parseDouble(temperatureTextField.getText()));
+                plotDelegate.updatePluviometric(Double.parseDouble(pluviometricTextField.getText()));
+                plotDelegate.updateWeather((String) weatherComboBox.getSelectedItem());
+                plotDelegate.updateForcast((String) forecastComboBox.getSelectedItem());
+            } else  JOptionPane.showMessageDialog(null, "Novos Valores de Sensores não Permitidos.");
         }
+    }
+
+    private boolean validSensors() {
+        boolean shouldReturn = false;
+        if(isSensorValueValid(Double.parseDouble(luminosityTextField.getText()), "luminosity") &&
+        isSensorValueValid(Double.parseDouble(temperatureTextField.getText()), "temperature") &&
+        isSensorValueValid(Double.parseDouble(moisterTextField.getText()), "moister") &&
+        isSensorValueValid(Double.parseDouble(phTextField.getText()), "ph") &&
+        isSensorValueValid(Double.parseDouble(pluviometricTextField.getText()), "pluviometric")&&
+        isSensorValueValid(Double.parseDouble(humidityTextField.getText()), "humidity")) shouldReturn = true ;
+        return shouldReturn;
+    }
+
+    private static boolean isSensorValueValid(double value, String sensorType){
+        boolean shouldReturn = false;
+        switch (sensorType) {
+            case "humidity": if (value >= 0 && value <= 100) shouldReturn = true; break;
+            case "moister": if (value >= 0 && value <= 100) shouldReturn = true; break;
+            case "pluviometric": if (value >= 0 && value <= 200) shouldReturn = true; break;
+            case "temperature": if (value >= -30 && value <= 50) shouldReturn = true; break;
+            case "ph": if (value >= 0 && value <= 14) shouldReturn = true; break;
+            case "luminosity": if (value >= 0 && value <= 24) shouldReturn = true; break;
+        }
+        return shouldReturn;
     }
 
     public void showEmulatorSensorWindow(){
