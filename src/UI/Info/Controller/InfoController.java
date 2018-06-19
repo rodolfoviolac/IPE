@@ -96,6 +96,8 @@ public class InfoController implements InfoInterface {
             else{
 
                 lot.harvest();
+                JOptionPane.showMessageDialog(null, "Colheita realizada com sucesso!.");
+
 
             }
 

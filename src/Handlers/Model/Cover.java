@@ -45,4 +45,13 @@ public class Cover{
     public void setAirHumidity(double airHumidity) {
         this.airHumidity = airHumidity;
     }
+
+    public void open() {
+        this.isOpen = true;
+    }
+
+    public void close() {
+        this.isOpen = false;
+
+    }
 }

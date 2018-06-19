@@ -28,6 +28,7 @@ public class Predict {
     int predictResponse;
 
     public int getPlantingPredict() {
+        System.out.print(temperature.getTemperatureValue());
         String query_url = " https://plantingdecision.herokuapp.com/predict";
         String json = "{ " +
                 "\"weatherId\" : \""+ weather.getWeatherId() +"\"," +

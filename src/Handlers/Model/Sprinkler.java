@@ -27,4 +27,12 @@ public class Sprinkler {
     public void setPluviometricValue(double pluviometricValue) {
         this.pluviometricValue = pluviometricValue;
     }
+
+    public void turnOn() {
+        this.isOn = true;
+    }
+
+    public void turnOff() {
+        this.isOn = false;
+    }
 }

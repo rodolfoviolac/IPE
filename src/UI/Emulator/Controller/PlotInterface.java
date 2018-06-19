@@ -10,5 +10,6 @@ public interface PlotInterface {
     void updateMoister(double newValue);
     void updatePluviometric(double newValue);
     void updateForcast(String newValue);
+    void updateLabels();
 
 }

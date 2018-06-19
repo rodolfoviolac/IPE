@@ -7,6 +7,8 @@ import UI.Emulator.Controller.EmulateSensorController;
 import UI.Emulator.Controller.PlotInterface;
 import UI.Info.Controller.InfoController;
 
+import java.util.concurrent.TimeUnit;
+
 public class Lot implements PlotInterface {
 
 
@@ -112,13 +114,30 @@ public class Lot implements PlotInterface {
         return forecast;
     }
 
-    public void cover(){
+    public void checkCoverNeed(){
 
-
+        if (cover.getTemperature() > 25 || cover.getLuminosity() > 16){
+            cover.close();
+        }
+        else{
+            if (!cover.isOpen()){
+                cover.open();
+                this.updateLabels();
+            }
+        }
     }
 
-    public void prepareGround(){
+    public void checkWaterNeed() throws InterruptedException {
 
+        if (sprinkler.getPluviometricValue() < 100 && cover.getTemperature() > 32){
+            this.sprinkler.turnOn();
+            this.updateLabels();
+            TimeUnit.SECONDS.sleep(5);
+            this.sprinkler.setPluviometricValue(250);
+            this.sprinkler.turnOff();
+            this.updateLabels();
+
+        }
 
     }
 
@@ -126,19 +145,22 @@ public class Lot implements PlotInterface {
 
         this.plantedSpecie = PlantSpecies.Nenhum;
         this.status = PlotStatus.readyToPlow;
+        this.updateLabels();
+
     }
 
     public void plant(PlantSpecies specie){
 
         this.status = PlotStatus.readyToHarvest;
         this.plantedSpecie = specie;
-        this.infoDelegate.updateLabels();
+        this.updateLabels();
 
     }
 
     public void plow(Fertilizer usedFertilizer){
         this.status = PlotStatus.readyToPlant;
         this.ground.setFertilizer(usedFertilizer);
+
     }
 
 
@@ -147,20 +169,18 @@ public class Lot implements PlotInterface {
     public void updateLuminosity(double newValue) {
 
         this.cover.setLuminosity(newValue);
-        this.infoDelegate.updateLabels();
+        this.checkCoverNeed();
     }
 
     @Override
     public void updatePH(double newValue) {
         this.ground.setPh(newValue);
-        this.infoDelegate.updateLabels();
     }
 
     @Override
     public void updateHumidity(double newValue) {
 
         this.cover.setAirHumidity(newValue);
-        this.infoDelegate.updateLabels();
 
     }
 
@@ -168,7 +188,13 @@ public class Lot implements PlotInterface {
     public void updateTemperature(double newValue) {
 
         this.cover.setTemperature(newValue);
-        this.infoDelegate.updateLabels();
+        this.checkCoverNeed();
+        try {
+            this.checkWaterNeed();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -176,7 +202,6 @@ public class Lot implements PlotInterface {
     public void updateWeather(String newValue) {
 
         this.weather = newValue;
-        this.infoDelegate.updateLabels();
 
 
     }
@@ -185,7 +210,6 @@ public class Lot implements PlotInterface {
     public void updateMoister(double newValue) {
 
         ground.setHumidity(newValue);
-        this.infoDelegate.updateLabels();
 
 
     }
@@ -194,13 +218,22 @@ public class Lot implements PlotInterface {
     public void updatePluviometric(double newValue) {
 
         this.sprinkler.setPluviometricValue(newValue);
-        this.infoDelegate.updateLabels();
+        try {
+            this.checkWaterNeed();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public void updateForcast(String newValue) {
         this.forecast = newValue;
+    }
+
+    @Override
+    public void updateLabels() {
+
         this.infoDelegate.updateLabels();
     }
 

@@ -77,6 +77,7 @@ public class EmulateSensorController {
         plotDelegate.updatePluviometric(Double.parseDouble(pluviometricTextField.getText()));
         plotDelegate.updateWeather(this.weather.getWeatherValue());
         plotDelegate.updateForcast(this.weather.getForecastValue());
+        plotDelegate.updateLabels();
     }
 
     private void initializerListeners(){
@@ -102,6 +103,7 @@ public class EmulateSensorController {
                 plotDelegate.updatePluviometric(Double.parseDouble(pluviometricTextField.getText()));
                 plotDelegate.updateWeather((String) weatherComboBox.getSelectedItem());
                 plotDelegate.updateForcast((String) forecastComboBox.getSelectedItem());
+                plotDelegate.updateLabels();
             } else  JOptionPane.showMessageDialog(null, "Novos Valores de Sensores não Permitidos.");
         }
     }
