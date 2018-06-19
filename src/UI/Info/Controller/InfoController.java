@@ -3,6 +3,7 @@ package UI.Info.Controller;
 import Handlers.DataBase.DB;
 import Handlers.Enum.PlotStatus;
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
+import Handlers.Http.HttpRequest;
 import Handlers.Model.InfoInterface;
 import Handlers.Model.Lot;
 import UI.Info.View.InfoFrame;
@@ -124,8 +125,6 @@ public class InfoController implements InfoInterface {
 
     @Override
     public void updateLabels() {
-
-
         infoFrame.setPlantedSpecieLabelText(lot.getPlantedSpecie().name());
         infoFrame.setLuminosityLabelText(String.valueOf(lot.getLuminosityValue()));
         infoFrame.setHumidityLabelText(String.valueOf(lot.getAirHumidityValue()));
@@ -138,6 +137,7 @@ public class InfoController implements InfoInterface {
         infoFrame.setPluviometricLabelText(String.valueOf(lot.getPluviometricValue()));
         infoFrame.setUserNameLabelText(new DB().getLogedUser().getName());
         infoFrame.setIrrigacaoLabel(lot.getSprinklerStatus());
-
+        HttpRequest request = ApplicationContextProvider.getApplicationContext().getBean("httpRequest", HttpRequest.class);
+        infoFrame.setProgressBar(request.requestPredict());
     }
 }
