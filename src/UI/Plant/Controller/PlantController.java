@@ -1,31 +1,27 @@
 package UI.Plant.Controller;
 
-import Handlers.DataBase.DB;
 import Handlers.Enum.PlantSpecies;
-import Handlers.Model.Fertilizer;
-import Handlers.Model.Plot;
+import Handlers.Model.Lot;
 import Handlers.Observers.Observers;
 import UI.Plant.View.PlantFrame;
-import UI.Plow.Controller.PlowController;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Set;
 
 public class PlantController {
 
 
-    private Plot plot;
+    private Lot lot;
     private PlantFrame plantFrame;
     private JButton confirmButton;
     private JComboBox comboBox;
 
 
 
-    public PlantController(Plot plot){
+    public PlantController(Lot lot){
 
-        this.plot = plot;
+        this.lot = lot;
         this.plantFrame = new PlantFrame();
         this.plantFrame.setTitle("Escolha de espécie");
         this.initComponents();
@@ -61,9 +57,7 @@ public class PlantController {
 private class confirmButtonListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
-        plot.plant((PlantSpecies) comboBox.getSelectedItem());
-        Observers ob = new Observers();
-        ob.syncAllTextFields();
+        lot.plant((PlantSpecies) comboBox.getSelectedItem());
         plantFrame.setVisible(false);
 
     }

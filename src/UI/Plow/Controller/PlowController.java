@@ -2,7 +2,7 @@ package UI.Plow.Controller;
 
 import Handlers.DataBase.DB;
 import Handlers.Model.Fertilizer;
-import Handlers.Model.Plot;
+import Handlers.Model.Lot;
 import Handlers.Observers.Observers;
 import UI.Plow.View.PlowForm;
 
@@ -17,12 +17,12 @@ public class PlowController {
     private JTextField quantityTextField;
     private JButton startButton;
     private PlowForm plowForm = new PlowForm();
-    private Plot plot;
+    private Lot lot;
 
-    public PlowController(Plot plot) {
+    public PlowController(Lot lot) {
         plowForm.setTitle("Arador Automâtico");
         this.initComponents();
-        this.plot = plot;
+        this.lot = lot;
         updateTextFields();
         initializerListeners();
     }
@@ -54,10 +54,8 @@ public class PlowController {
                 DB db = new DB();
                 boolean transaction = db.useFertilizer((String)FertilizerNameComboBox.getSelectedItem(), Integer.parseInt(quantityTextField.getText()));
                 if(transaction){
-                    plot.plow(db.getFertilizerById((String) FertilizerNameComboBox.getSelectedItem()));
+                    lot.plow(db.getFertilizerById((String) FertilizerNameComboBox.getSelectedItem()));
                     updateTextFields();
-                    Observers ob = new Observers();
-                    ob.syncAllTextFields();
                     plowForm.setVisible(false);
 
                 }

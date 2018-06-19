@@ -16,6 +16,7 @@ public class UserData {
     private UserData handler_UserDB_user;
     private User LogedUserIndex;
 
+
     public UserData(){
         User initUser = new User("none", "none","none", "none");
         setLogedUser(initUser);

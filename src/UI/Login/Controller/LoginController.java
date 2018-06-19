@@ -2,7 +2,7 @@ package UI.Login.Controller;
 
 import Handlers.DataBase.DB;
 import Handlers.DataBase.Data.UserData;
-import Handlers.FrameWorkUtils.ApplicationContextProvider;
+import Handlers.Model.Lot;
 import UI.Emulator.Controller.EmulateSensorController;
 import Handlers.Model.User;
 import UI.Info.Controller.InfoController;
@@ -20,7 +20,6 @@ public class LoginController{
     private JTextField loginTextField;
     private JPasswordField passwordTextField;
     private UserData user_handler;
-    private InfoController infoController = ApplicationContextProvider.getApplicationContext().getBean("infoController", InfoController.class);
 
 
     public LoginController() {
@@ -60,10 +59,12 @@ public class LoginController{
                 JOptionPane.showMessageDialog(null, "Senha incorreta.");
             }
             else{
-                loginFrame.setVisible(false);
-                new EmulateSensorController().showEmulatorSensorWindow();
                 DB db = new DB();
                 db.setLogedUser(user);
+                Lot main_lot = new Lot();
+                InfoController infoController = new InfoController(main_lot);
+                loginFrame.setVisible(false);
+                new EmulateSensorController(main_lot).showEmulatorSensorWindow();
                 infoController.showLoginWindow();
             }
 

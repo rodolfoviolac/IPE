@@ -7,7 +7,7 @@ import UI.Emulator.Controller.EmulateSensorController;
 import UI.Emulator.Controller.PlotInterface;
 import UI.Info.Controller.InfoController;
 
-public class Plot implements PlotInterface {
+public class Lot implements PlotInterface {
 
 
     private int ID;
@@ -18,6 +18,7 @@ public class Plot implements PlotInterface {
     private Cover cover;
     private Sprinkler sprinkler;
     private String weather;
+    private String forecast;
     private InfoInterface infoDelegate;
 
     public int getID() {
@@ -36,20 +37,79 @@ public class Plot implements PlotInterface {
         return status;
     }
 
-    public Plot(){
+    public Lot(){
 
         this.ID = 1;
         this.area = 1000;
         this.status = PlotStatus.readyToPlant;
         this.plantedSpecie = PlantSpecies.Nenhum;
+        this.weather = "";
+        this.forecast = "";
         this.ground = new Ground();
+        this.sprinkler = new Sprinkler();
         this.cover = new Cover();
 
     }
 
-    public double getLuminosity(){
+    public String getCoverStatus(){
 
-        return cover.getLuminosity();
+        if (cover.isOpen()){
+            return "Aberto";
+        }
+        else{
+            return "Fechado";
+        }
+    }
+
+    public String getSprinklerStatus(){
+        if (sprinkler.isOn()){
+            return "Ligado";
+        }
+        else{
+            return "Desligado";
+        }
+    }
+
+    public double getLuminosityValue(){
+
+        return this.cover.getLuminosity();
+    }
+
+    public double getMoisterValue(){
+
+        return this.ground.getHumidity();
+    }
+
+    public double getAirHumidityValue(){
+
+
+        return this.cover.getAirHumidity();
+
+    }
+
+    public double getPluviometricValue(){
+
+        return this.sprinkler.getPluviometricValue();
+
+    }
+
+    public double getTemperatureValue(){
+
+        return this.cover.getTemperature();
+    }
+
+    public String getWeather(){
+
+        return this.weather;
+    }
+
+    public double getGroundPHValue(){
+
+        return this.ground.getPh();
+    }
+
+    public String getForecast() {
+        return forecast;
     }
 
     public void cover(){
@@ -80,6 +140,7 @@ public class Plot implements PlotInterface {
         this.status = PlotStatus.readyToPlant;
         this.ground.setFertilizer(usedFertilizer);
     }
+
 
 
     @Override
@@ -137,8 +198,15 @@ public class Plot implements PlotInterface {
 
     }
 
+    @Override
+    public void updateForcast(String newValue) {
+        this.forecast = newValue;
+        this.infoDelegate.updateLabels();
+    }
+
     public void setInfoDelegate(InfoInterface infoController) {
         this.infoDelegate = infoController;
 
     }
+
 }

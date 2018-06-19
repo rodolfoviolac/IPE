@@ -1,6 +1,7 @@
 package UI.Emulator.Controller;
 
 import Handlers.FrameWorkUtils.ApplicationContextProvider;
+import Handlers.Model.Lot;
 import Handlers.Observers.Observers;
 import UI.Emulator.View.EmulateSensorForm;
 import org.springframework.context.annotation.Scope;
@@ -38,9 +39,11 @@ public class EmulateSensorController {
     private JButton updateButton;
     private JComboBox forecastComboBox;
     private JComboBox weatherComboBox;
+    private PlotInterface plotDelegate;
 
 
-    public EmulateSensorController() {
+    public EmulateSensorController(Lot main_lot) {
+        this.plotDelegate = main_lot;
         EmulateSensorsJPanel = new EmulateSensorForm();
         this.initComponents();
         this.initializerListeners();
@@ -66,6 +69,15 @@ public class EmulateSensorController {
         this.phTextField.setText(Double.toString(ph.getPhValue()));
         this.pluviometricTextField.setText(Double.toString(pluviometric.getPluviometricValue()));
         this.temperatureTextField.setText(Double.toString(temperature.getTemperatureValue()));
+        plotDelegate.updateHumidity(Double.parseDouble(humidityTextField.getText()));
+        plotDelegate.updateLuminosity(Double.parseDouble(luminosityTextField.getText()));
+        plotDelegate.updateMoister(Double.parseDouble(moisterTextField.getText()));
+        plotDelegate.updatePH(Double.parseDouble(phTextField.getText()));
+        plotDelegate.updateTemperature(Double.parseDouble(temperatureTextField.getText()));
+        plotDelegate.updatePluviometric(Double.parseDouble(pluviometricTextField.getText()));
+        plotDelegate.updateWeather(this.weather.getWeatherValue());
+        plotDelegate.updateForcast(this.weather.getForecastValue());
+
     }
 
     private void initializerListeners(){
@@ -82,8 +94,14 @@ public class EmulateSensorController {
             humidity.setHumidityValue(Double.parseDouble(humidityTextField.getText()));
             weather.setWeatherValue((String) weatherComboBox.getSelectedItem());
             weather.setForecastValue((String) forecastComboBox.getSelectedItem());
-            Observers ob = new Observers();
-            ob.syncAllTextFields();
+            plotDelegate.updateHumidity(Double.parseDouble(humidityTextField.getText()));
+            plotDelegate.updateLuminosity(Double.parseDouble(luminosityTextField.getText()));
+            plotDelegate.updateMoister(Double.parseDouble(moisterTextField.getText()));
+            plotDelegate.updatePH(Double.parseDouble(phTextField.getText()));
+            plotDelegate.updateTemperature(Double.parseDouble(temperatureTextField.getText()));
+            plotDelegate.updatePluviometric(Double.parseDouble(pluviometricTextField.getText()));
+            plotDelegate.updateWeather((String) weatherComboBox.getSelectedItem());
+            plotDelegate.updateForcast((String) forecastComboBox.getSelectedItem());
         }
     }
 

@@ -1,6 +1,6 @@
 package Handlers.Model;
 
-public class Ground implements sensorUpdateValues{
+public class Ground{
 
 
     private double ph;
@@ -19,13 +19,23 @@ public class Ground implements sensorUpdateValues{
         this.fertilizer = fertilizer;
     }
 
-    @Override
-    public void update(String name, Double newValue) {
-        if (name == "ph"){
-            this.ph = newValue;
-        }
-        else if (name == "humidity"){
-            this.humidity = newValue;
-        }
+    public void setPh(double ph) {
+        this.ph = ph;
+    }
+
+    public void setHumidity(double humidity) {
+        this.humidity = humidity;
+    }
+
+    public double getPh() {
+        return ph;
+    }
+
+    public double getHumidity() {
+        return humidity;
+    }
+
+    public Fertilizer getFertilizer() {
+        return fertilizer;
     }
 }

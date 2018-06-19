@@ -6,7 +6,7 @@ public class User {
     private String name;
     private String login;
     private String password;
-    private Plot plot;
+    private Lot lot;
 
 
     public User(String ID, String name, String login, String password) {
